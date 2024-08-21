@@ -1,0 +1,11 @@
+<mat-toolbar style="background-color: #5469d4" class="mat-elevation-z8">
+    <button mat-icon-button>
+<mat-icon style="color: white;" routerLink="">home</mat-icon>
+    </button>
+    <span class="logo" routerLink="">RailEase</span>
+    <span class="spacer"></span>
+    <button style="color: white;" routerLink="" mat-button>Home</button>
+    <button style="color: white;" routerLink="profile" mat-button>Profile</button>
+    <button style="color: white;" routerLink="logout" (click)="onLogout()" mat-button>Logout</button>
+</mat-toolbar>
+ <router-outlet></router-outlet>

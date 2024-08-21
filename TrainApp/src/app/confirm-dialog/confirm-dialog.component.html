@@ -1,0 +1,13 @@
+<div class="confirm-page" >
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+<h1>Confirm Action</h1>
+<button mat-button (click)="onCancel()">x</button>
+</div>
+<div>
+  <p>Fare is: {{fareData.fare}}. Are you sure you want to proceed?</p>
+</div>
+<div class="confirm-button">
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button color="primary" (click)="onConfirm()">Confirm</button>
+</div>
+</div>

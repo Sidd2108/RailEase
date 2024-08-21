@@ -1,0 +1,44 @@
+<!-- INSPO:  https://www.behance.net/gallery/69583099/Mobile-Flights-App-Concept -->
+<div class="bodyyy">
+<div class="ticket-system" style="background-color: #5469d4">
+    <div class="top">
+    <h1 class="title"></h1>
+    <div class="printer">
+        
+    </div>
+    <div class="receipts-wrapper">
+      
+       <div class="receipts">
+          <div class="receipt">
+            <h2>RailEase</h2>
+             <div class="route">
+                <h2>{{ticket.departureStation}}</h2>
+                <mat-icon>arrow_right</mat-icon>
+                  
+                <h2>{{ticket.arrivalStation}}</h2>
+             </div>
+             <div class="details">
+                <div class="item">
+                   <span>Passenger</span>
+                   <h3>{{ticket.issuedTo}}</h3>
+                </div>
+                <div class="item">
+                   <span>Amount</span>
+                   <h3>{{ticket.amount}}</h3>
+                </div>
+                <div class="item">
+                   <span>Booking Date and Time</span>
+                   <h3>{{paymentDate}} {{paymentTime}}</h3>
+                </div>
+                <div class="item">
+                   <span>Payment Status</span>
+                   <h3>{{ticket.paymentStatus}}</h3>
+                </div>
+             
+             </div>
+          </div>
+    
+       </div>
+    </div>
+ </div>
+</div>
