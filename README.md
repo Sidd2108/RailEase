@@ -1,4 +1,4 @@
-# RailEase - Train Ticket Booking Application🚀🚀
+# RailEase - Train Ticket Booking Application
 
 RailEase is a web application designed for seamless ticket booking across the Mumbai local train network. The application allows users to book tickets between any two stations on the Western, Central, and Harbour lines.
 
