@@ -8,22 +8,21 @@
                     Book Your Mumbai Local Train Tickets with </p> <h2> RailEase! </h2>
             </div>
             <div class="welcome-hero-serch-box">
-                <div class="welcome-hero-form">
-                    <div class="single-welcome-hero-form">
-                        <h3>Source</h3>
-                            <input type="text" placeholder="Ex: Bandra, Thane, Vashi"  (keyup)="getSource($event)"/>
-                        <div class="welcome-hero-form-icon">
-                            <i class="flaticon-list-with-dots"></i>
-                        </div>
-                    </div>
-                    <div class="single-welcome-hero-form">
-                        <h3>Destination</h3>
-                            <input type="text" placeholder="Ex: Bandra, Thane, Vashi"  (keyup)="getDestination($event)"/>
-                        <div class="welcome-hero-form-icon">
-                            <i class="flaticon-gps-fixed-indicator"></i>
-                        </div>
-                    </div>
-                </div>
+                <div class="form-group">
+                    <label for="source" style="background-color: white;color: black;">Source:</label>
+                    <select id="source" [(ngModel)]="selectedSource">
+                      <option value="" disabled>Select Source</option>
+                      <option *ngFor="let station of stations" [value]="station">{{ station }}</option>
+                    </select>
+                  </div>
+                
+                  <div class="form-group">
+                    <label for="destination" style="background-color: white;color: black;">Destination:</label>
+                    <select id="destination" [(ngModel)]="selectedDestination">
+                      <option value="" disabled>Select Destination</option>
+                      <option *ngFor="let station of stations" [value]="station">{{ station }}</option>
+                    </select>
+                  </div>
                 <div class="welcome-hero-serch">
                     <button class="welcome-hero-btn" (click)="getTheFare()">
                        <h2 style="color: white;"> <b> Get Fare</b> </h2> 

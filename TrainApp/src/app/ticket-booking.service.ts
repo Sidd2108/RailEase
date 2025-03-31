@@ -9,8 +9,8 @@ import { BookTicketParam } from './bookTicketParam';
 })
 export class TicketBookingService {
 
-  _fareUrl = 'http://localhost:3446/createRouteAndgetFare';
-  _bookTicketUrl = 'http://localhost:3446/v1/users/book-ticket';
+  _fareUrl = `http://${window.location.host}:5001/createRouteAndgetFare`;
+  _bookTicketUrl = `http://${window.location.host}:5001/v1/users/book-ticket`;
   constructor(private __http:HttpClient) { }
 
   

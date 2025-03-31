@@ -15,12 +15,9 @@ public class UserDto {
     private int userId;
     private String username;
 
-    private String password;
 
     private String email;
     private String phone;
-
-    private LocalDateTime createdAt;
 
     private Long balance;
 

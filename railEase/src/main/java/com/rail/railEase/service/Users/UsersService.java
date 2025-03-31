@@ -10,10 +10,10 @@ import com.rail.railEase.model.Users;
 
 public interface UsersService {
     Users registerUser(Users user) throws UserAlreadyExists, InvalidCredentials;
-    Users loginUser(LoginRequest newUser) throws InvalidCredentials;
+    UserDto loginUser(LoginRequest newUser) throws InvalidCredentials;
     String bookTicket(Integer routeId, String email);
 
 
-    Users updateUser(UserDto user) throws ResourceNotFoundException, InvalidCredentials;
+    UserDto updateUser(Users user) throws ResourceNotFoundException, InvalidCredentials;
 }
 

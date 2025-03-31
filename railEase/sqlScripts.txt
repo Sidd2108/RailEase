@@ -1,0 +1,62 @@
+CREATE TABLE IF NOT EXISTS public.users
+(
+    user_id integer NOT NULL DEFAULT nextval('users_user_id_seq'::regclass),
+    username character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    password character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    email character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    phone character varying(20) COLLATE pg_catalog."default",
+    created_at timestamp without time zone NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    balance bigint,
+    CONSTRAINT users_pkey PRIMARY KEY (user_id),
+    CONSTRAINT users_email_key UNIQUE (email),
+    CONSTRAINT users_phone_key UNIQUE (phone)
+);
+
+CREATE TABLE IF NOT EXISTS public.station
+(
+    station_id integer NOT NULL DEFAULT nextval('station_station_id_seq'::regclass),
+    station_name character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    created_at timestamp without time zone NOT NULL,
+    price numeric(10,2) NOT NULL,
+    line_1 character(1) COLLATE pg_catalog."default",
+    line_2 character(1) COLLATE pg_catalog."default",
+    CONSTRAINT station_pkey PRIMARY KEY (station_id)
+);
+
+CREATE TABLE IF NOT EXISTS public.route
+(
+    route_id integer NOT NULL DEFAULT nextval('route_route_id_seq'::regclass),
+    departure_station_id integer NOT NULL,
+    arrival_station_id integer NOT NULL,
+    created_at timestamp without time zone NOT NULL,
+    fare numeric(10,2) NOT NULL,
+    CONSTRAINT route_pkey PRIMARY KEY (route_id),
+    CONSTRAINT route_arrival_station_id_fkey FOREIGN KEY (arrival_station_id)
+        REFERENCES public.station (station_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT route_departure_station_id_fkey FOREIGN KEY (departure_station_id)
+        REFERENCES public.station (station_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+);
+
+CREATE TABLE IF NOT EXISTS public.ticket
+(
+    ticket_id integer NOT NULL DEFAULT nextval('ticket_ticket_id_seq'::regclass),
+    user_id integer NOT NULL,
+    route_id integer NOT NULL,
+    amount numeric(10,2) NOT NULL,
+    payment_time timestamp without time zone NOT NULL,
+    payment_status character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    created_at timestamp without time zone NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT ticket_pkey PRIMARY KEY (ticket_id),
+    CONSTRAINT ticket_route_id_fkey FOREIGN KEY (route_id)
+        REFERENCES public.route (route_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT ticket_user_id_fkey FOREIGN KEY (user_id)
+        REFERENCES public.users (user_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+);

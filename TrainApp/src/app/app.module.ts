@@ -17,6 +17,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { TicketPageComponent } from './ticket-page/ticket-page.component';
 import { FailedTicketPageComponent } from './failed-ticket-page/failed-ticket-page.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { EditBalanceComponent } from './edit-balance/edit-balance.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     ProfileComponent,
     TicketPageComponent,
     FailedTicketPageComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    EditUserComponent,
+    EditBalanceComponent
   ],
   imports: [
     BrowserModule,

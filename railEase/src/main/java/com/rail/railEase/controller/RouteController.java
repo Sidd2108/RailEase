@@ -1,23 +1,20 @@
 package com.rail.railEase.controller;
 
-import com.rail.railEase.dto.FareDto;
-import com.rail.railEase.dto.RouteDto;
-import com.rail.railEase.dto.RouteResponseDto;
-import com.rail.railEase.exception.ResourceNotFoundException;
-import com.rail.railEase.model.Route;
-import com.rail.railEase.service.Route.RouteService;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Optional;
+import com.rail.railEase.dto.RouteDto;
+import com.rail.railEase.dto.RouteResponseDto;
+import com.rail.railEase.service.Route.RouteService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
 public class RouteController {
 
     @Autowired

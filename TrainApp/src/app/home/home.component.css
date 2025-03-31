@@ -217,7 +217,21 @@ html, body {
     .welcome-hero-form{
         display: inline;
     }
-    .welcome-hero-serch{
-        display: flex;
+    .welcome-hero-serch-box{
+        display: ruby;
     }
 }
+.station-selector {
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+  }
+  

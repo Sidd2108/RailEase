@@ -56,8 +56,15 @@ export class ConfirmDialogComponent {
         this.router.navigate(['ticket']); 
         this.dialogRef.close(true);
         },
-        error => console.error('Error!', error)
+        error => {
+          console.log(error);
+          
+          this.router.navigate(['failedTicket']); 
+        }
       );
+
+      
+    this.dialogRef.close(true);
 
 }
 

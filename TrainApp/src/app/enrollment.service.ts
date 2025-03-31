@@ -7,9 +7,9 @@ import { UserLogin } from './user-login';
   providedIn: 'root'
 })
 export class EnrollmentService {
-  _registerUrl = 'http://localhost:3446/v1/users/register';
-  _loginUrl = 'http://localhost:3446/v1/users/login';
-  _updateUrl = ''
+  _registerUrl = `http://${window.location.host}:5001/v1/users/register`;
+  _loginUrl = `http://${window.location.host}:5001/v1/users/login`;
+  _updateUrl = `http://${window.location.host}:5001/v1/users/updateProfile`
   constructor(private __http:HttpClient) { }
 
   loginUser(user:UserLogin){
@@ -21,7 +21,7 @@ export class EnrollmentService {
   }
 
   updateUser(user:User){
-    return this.__http.post<any>(this._updateUrl,user);
+    return this.__http.put<any>(this._updateUrl,user);
   }
 
 }

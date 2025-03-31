@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { User } from '../user';
 import { EnrollmentService } from '../enrollment.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -13,7 +14,7 @@ export class SignupComponent {
   userModel = new User("","","",0,"");
 
   
-  constructor(private _enrollmentService: EnrollmentService,private router: Router) {}
+  constructor(private _enrollmentService: EnrollmentService,private router: Router,private authService: AuthService) {}
 
   submit(){
     this._enrollmentService.enroll(this.userModel)
@@ -21,7 +22,8 @@ export class SignupComponent {
       data=>{
         console.log('Success!',data);
         sessionStorage.setItem('user', JSON.stringify(data)); // Save user data to sessionStorage
-        this.router.navigate(['']); 
+        this.router.navigate(['home']); 
+        this.authService.login('some-token');
       },
       error => console.error('Error!',error)
       

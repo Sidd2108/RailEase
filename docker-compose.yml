@@ -1,0 +1,40 @@
+version: "3.9"
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: TrainApp/dockerfile
+    container_name: frontend
+    ports:
+    - "80:80"
+    depends_on:
+    - springboot
+    - db
+    environment:
+    - servername=springboot
+    - username=postgres
+    - password=1234
+  springboot:
+    build:
+      context: .
+      dockerfile: railEase/dockerfile
+    container_name: springboot
+    ports:
+    - "5001:5001"
+    environment:
+    - username=postgres
+    - password=1234
+    - dbservername=db
+    - dbname=railease
+ 
+  db:
+    build:
+      context: .
+      dockerfile: ./postgres.df
+    container_name: backend
+    ports:
+    - "5432:5432"
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=1234
+    - dbname=railease

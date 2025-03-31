@@ -1,0 +1,28 @@
+
+<div class="container">
+    <div class="main-body">
+        <br><br>
+        <form (ngSubmit)="submit()" #userForm="ngForm" id="stripe-login">
+     
+        
+            <div class="form-group field padding-bottom--24">
+                <label>Balance</label>
+                <input type="number" #balance="ngModel" pattern="^-?\d+$" [class.is-invalid]="balance.invalid && balance.touched" name="balance" [(ngModel)]="userModel.balance" class="form-control">
+                <small [hidden]="balance.valid || balance.untouched" style="color: red;">Balance must be a number</small>
+            </div>
+            <div class="form-group field padding-bottom--24">
+                <div class="grid--50-50">
+                    <label for="password">Password</label>
+                 
+                </div>
+                <input type="password" required #password="ngModel" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="password" [(ngModel)]="userModel.password" class="form-control">
+                <small [hidden]="password.valid || password.untouched" style="color: red;">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</small>
+            </div>
+            <div class="padding-bottom--20">
+                <Button type="submit" class="button-29" >Deposit</Button>
+            </div>
+        
+        </form>
+
+        </div>
+    </div>

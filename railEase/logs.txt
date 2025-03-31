@@ -1,0 +1,66 @@
+INFO  21/08/2024 11:22:51 : Login successful for user id : 30 and name : Eminem
+INFO  21/08/2024 11:33:55 : Login successful for user id : 30 and name : Eminem
+INFO  21/08/2024 11:34:06 : Login successful for user id : 30 and name : Eminem
+INFO  21/08/2024 11:36:36 : User updated with id : 30 and name : Dipanshu
+INFO  21/08/2024 13:43:50 : Ticket generated with id : 24 for user with id : 30
+ERROR 24/08/2024 12:32:53 : Authentication failed for user id : 30. Error : Incorrect password
+INFO  24/08/2024 12:33:51 : New user registered with id : 31 and name : Dipanshu
+INFO  24/08/2024 12:34:02 : Login successful for user id : 31 and name : Dipanshu
+INFO  24/08/2024 12:34:14 : Ticket generated with id : 25 for user with id : 31
+INFO  24/08/2024 13:48:58 : User updated with id : 31 and name : Dipanshu
+INFO  24/08/2024 13:54:55 : User updated with id : 31 and name : Dipanshu
+INFO  24/08/2024 13:59:29 : User updated with id : 31 and name : Dipanshu
+INFO  24/08/2024 14:00:26 : User updated with id : 31 and name : Dipanshu
+ERROR 24/08/2024 15:45:24 : Authentication failed for user id : 31. Error : Incorrect password
+ERROR 24/08/2024 15:45:30 : Authentication failed for user id : 31. Error : Incorrect password
+ERROR 24/08/2024 15:45:37 : Authentication failed for user id : 31. Error : Incorrect password
+ERROR 24/08/2024 15:45:52 : Authentication failed for user id : 31. Error : Incorrect password
+INFO  24/08/2024 15:54:19 : Login successful for user id : 26 and name : Kendrick
+INFO  24/08/2024 15:54:41 : User updated with id : 26 and name : Kendrick
+INFO  24/08/2024 16:01:17 : User updated with id : 26 and name : Kendrick
+INFO  24/08/2024 16:19:34 : New route created with id : 52 
+INFO  24/08/2024 16:20:43 : Login successful for user id : 26 and name : Kendrick
+INFO  24/08/2024 16:20:58 : New route created with id : 53 
+INFO  24/08/2024 16:21:58 : User updated with id : 26 and name : Kendrick
+INFO  24/08/2024 16:22:11 : Ticket generated with id : 26 for user with id : 26
+INFO  24/08/2024 16:45:51 : New route created with id : 54 
+INFO  24/08/2024 16:45:53 : Ticket generated with id : 27 for user with id : 26
+INFO  24/08/2024 16:46:17 : New route created with id : 55 
+INFO  24/08/2024 16:46:19 : Ticket generated with id : 28 for user with id : 26
+INFO  24/08/2024 16:46:46 : New route created with id : 56 
+INFO  24/08/2024 16:46:48 : Ticket generated with id : 29 for user with id : 26
+INFO  24/08/2024 17:00:47 : Login successful for user id : 26 and name : Kendrick
+INFO  24/08/2024 17:01:01 : User updated with id : 26 and name : Kendrick
+INFO  24/08/2024 17:01:15 : New route created with id : 57 
+INFO  24/08/2024 17:01:17 : Ticket generated with id : 30 for user with id : 26
+INFO  24/08/2024 17:01:30 : User updated with id : 26 and name : Kendrick
+INFO  24/08/2024 17:01:46 : New route created with id : 58 
+INFO  24/08/2024 17:01:48 : Ticket generated with id : 31 for user with id : 26
+INFO  24/08/2024 17:01:54 : User updated with id : 26 and name : Kendrick
+INFO  24/08/2024 17:07:09 : New user registered with id : 32 and name : 2Pac
+INFO  24/08/2024 17:07:19 : New route created with id : 59 
+INFO  24/08/2024 17:10:23 : New route created with id : 60 
+INFO  24/08/2024 17:12:27 : New route created with id : 61 
+INFO  24/08/2024 17:12:48 : User updated with id : 32 and name : 2Pac
+INFO  24/08/2024 17:13:02 : User updated with id : 32 and name : 2Pac
+INFO  24/08/2024 17:13:15 : New route created with id : 62 
+INFO  24/08/2024 17:13:17 : Ticket generated with id : 32 for user with id : 32
+INFO  24/08/2024 17:26:28 : Login successful for user id : 26 and name : Kendrick
+INFO  24/08/2024 17:26:48 : New route created with id : 63 
+INFO  24/08/2024 17:26:50 : Ticket generated with id : 33 for user with id : 26
+INFO  24/08/2024 17:27:52 : New route created with id : 64 
+INFO  24/08/2024 17:27:54 : Ticket generated with id : 34 for user with id : 26
+INFO  24/08/2024 17:28:11 : New route created with id : 65 
+INFO  24/08/2024 17:28:13 : Ticket generated with id : 35 for user with id : 26
+INFO  24/08/2024 17:44:39 : Login successful for user id : 26 and name : Kendrick
+INFO  24/08/2024 17:48:28 : New route created with id : 66 
+INFO  24/08/2024 17:48:29 : Ticket generated with id : 36 for user with id : 26
+INFO  24/08/2024 17:48:46 : User updated with id : 26 and name : Kendrick
+INFO  24/08/2024 17:48:57 : Ticket generated with id : 37 for user with id : 26
+INFO  24/08/2024 17:52:40 : Login successful for user id : 26 and name : Kendrick
+INFO  24/08/2024 18:00:00 : Login successful for user id : 26 and name : Kendrick
+INFO  01/09/2024 12:41:07 : Login successful for user id : 26 and name : Kendrick
+INFO  01/09/2024 12:41:16 : New route created with id : 68 
+INFO  01/09/2024 12:41:18 : Ticket generated with id : 39 for user with id : 26
+INFO  10/09/2024 10:11:55 : (Admin) New station created with id : 1 and name : Vashi
+INFO  10/09/2024 10:13:28 : (Admin) New station created with id : 1 and name : Vashi

@@ -15,7 +15,8 @@ export class HomeComponent {
   public destination: string = '';
   sourceDest = new SourceDest(this.source, this.destination);
   fareData: any; // Variable to hold fare data
-
+  public selectedSource: string = '';
+  public selectedDestination: string = '';
   constructor(
     private _ticketService: TicketBookingService,
     private router: Router,
@@ -31,19 +32,110 @@ export class HomeComponent {
   }
 
   getTheFare() {
-    this.sourceDest = new SourceDest(this.source, this.destination);
+    this.sourceDest = new SourceDest(this.selectedSource, this.selectedDestination);
     console.log(this.sourceDest);
     
-    this._ticketService.getFare(new SourceDest(this.source, this.destination))
+    this._ticketService.getFare(new SourceDest(this.selectedSource, this.selectedDestination))
       .subscribe(
         data => {
           console.log('Success!', data);
           this.fareData = data; // Store fare data
           this.openConfirmDialog(); // Open dialog after setting fare data
         },
-        error => console.error('Error!', error)
+        error => {
+        console.error('Error!', error)
+          
+        this.router.navigate(['failedTicket']); 
+        }
+          
       );
   }
+
+  stations = [
+    'Churchgate',
+    'Marine Lines',
+    'Charni Road',
+    'Grant Road',
+    'Mumbai Central',
+    'Mahalaxmi',
+    'Lower Parel',
+    'Prabhadevi',
+    'Dadar',
+    'Matunga Road',
+    'Mahim Junction',
+    'Bandra',
+    'Khar Road',
+    'Santacruz',
+    'Vile Parle',
+    'Andheri',
+    'Jogeshwari',
+    'Ram Mandir',
+    'Goregaon',
+    'Malad',
+    'Kandivali',
+    'Borivali',
+    'Dahisar',
+    'Mira Road',
+    'Bhayandar',
+    'Naigaon',
+    'Vasai Road',
+    'Nalasopara',
+    'Virar',
+    'Vaitarna',
+    'Saphale',
+    'Kelva Road',
+    'Palghar',
+    'Umroli',
+    'Boisar',
+    'Vangaon',
+    'Dahanu Road',
+    'Parel',
+    'Currey Road',
+    'Chinchpokli',
+    'Byculla',
+    'Sandhurst Road',
+    'Masjid Bunder',
+    'CST (Chhatrapati Shivaji Maharaj Terminus)',
+    'Vidyavihar',
+    'Ghatkopar',
+    'Vikhroli',
+    'Kanjurmarg',
+    'Bhandup',
+    'Nahur',
+    'Mulund',
+    'Thane',
+    'Kalwa',
+    'Mumbra',
+    'Diva Junction',
+    'Kopar',
+    'Dombivli',
+    'Thakurli',
+    'Kalyan',
+    'Vitthalwadi',
+    'Ulhasnagar',
+    'Ambarnath',
+    'Badlapur',
+    'Vangani',
+    'Shelu',
+    'Neral',
+    'Bhivpuri Road',
+    'Karjat',
+    'Kurla',
+    'Tilak Nagar',
+    'Chembur',
+    'Govandi',
+    'Mankhurd',
+    'Vashi',
+    'Sanpada',
+    'Juinagar',
+    'Nerul',
+    'Seawoods-Darave',
+    'Belapur CBD',
+    'Kharghar',
+    'Mansarovar',
+    'Khandeshwar',
+    'Panvel'
+  ];
 
   openConfirmDialog(): void {
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
@@ -51,10 +143,5 @@ export class HomeComponent {
       data: { fareData: this.fareData } // Pass fare data to dialog
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        // Optionally handle result if needed
-      }
-    });
   }
 }
